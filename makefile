@@ -1,6 +1,5 @@
 main:	TreeNode.o Person.o Object.o Tree.o Employee.o main.o
-	g++ TreeNode.o Person.o Object.o Tree.o main.o Employee.o -o run
-
+	g++ TreeNode.o Person.o Object.o Tree.o Employee.o main.o -o run
 Person.o:	Person.h Person.cpp Object.h
 	g++ -c Person.cpp
 
@@ -15,6 +14,5 @@ TreeNode.o:	TreeNode.h TreeNode.cpp Object.h
 	g++ -c TreeNode.cpp
 Tree.o:	TreeNode.h Object.h Tree.h Tree.cpp
 	g++ -c Tree.cpp
-
 clean:
 	rm *.o

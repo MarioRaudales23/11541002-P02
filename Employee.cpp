@@ -5,7 +5,7 @@
 using std::stringstream;
 using std::string;
 
-Employee::Employee(double sueldo,string name,int edad):Person(name,edad),sueldo(sueldo){
+Employee::Employee(double sueldo,string name,string cargo):Person(name),sueldo(sueldo),cargo(cargo){
 }
 
 Employee::~Employee(){
@@ -14,7 +14,7 @@ Employee::~Employee(){
 
 string Employee::toString()const{
 	stringstream ss;
-	ss<<Person::toString()<<" Sueldo:"<<sueldo;
+	ss<<Person::toString()<<" Sueldo:"<<sueldo<<" cargo: "<<cargo;
 	return ss.str();
 }
 //Devuelve el sueldo actual

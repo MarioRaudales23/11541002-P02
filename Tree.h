@@ -14,5 +14,6 @@ class Tree:public Object{
 		bool insert(Object*,Object*);
 		TreeNode* buscar(TreeNode*,Object*);
 		int profundidad(TreeNode*);
+		TreeNode* getRaiz();
 		void imprimirpro();
 };

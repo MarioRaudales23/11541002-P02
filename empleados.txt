@@ -1,0 +1,23 @@
+Presidente,Manuel,5000
+	Gerente,Ana,2000
+		operaciones,Luana,1000
+			Mentiroso,jeji,1500
+		operador,didi,100
+	operador,dada,110
+		Secretaria,dodo,50
+			Secretaria,dede,50
+		Secretaria,dudu,50
+			Mercadito,chambrososs,1200
+					Mentiroso,jtss,1500
+			Mercadito,chambrosos,1200
+					Mentiroso,jts,1500
+	Mercadeo,Mino,1900
+		Mentiroso,Judas,1500
+			Mentiroso,jeji,1500
+				Mercadito,chambroso,1200
+					Mentiroso,jt,1500
+				Mentiroso,jr,1500
+					Mentiroso,jt,1500
+				Mentiroso,jj,1500
+					Mentiroso,jtll,1500
+				Mentiroso,jtp,1500

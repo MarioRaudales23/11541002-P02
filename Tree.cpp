@@ -17,6 +17,9 @@ Tree::Tree(TreeNode* raiz):raiz(raiz){
 Tree::~Tree(){
 	delete raiz;
 }
+TreeNode* Tree::getRaiz(){
+	return raiz;
+}
 
 bool Tree::insert(Object* padre,Object* nuevo){
 	if (raiz == NULL)
@@ -33,8 +36,10 @@ bool Tree::insert(Object* padre,Object* nuevo){
 				if (pneo->getHijo()==NULL)
 				{
 					pneo->setHijo(neo);
+					neo->setFather(pneo);
 					return true;
 				}else{
+					neo->setFather(pneo);
 					pneo = pneo->getHijo();
 					while(pneo->getHermano()!=NULL){
 						pneo = pneo->getHermano();

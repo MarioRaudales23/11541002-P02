@@ -48,3 +48,11 @@ Object* TreeNode::getData(){
 bool TreeNode::setData(Object* ndata){
 	data = ndata;
 }
+
+TreeNode* TreeNode::getFather(){
+	return father;
+}
+
+void TreeNode::setFather(TreeNode* nfather){
+	father = nfather;
+}

@@ -5,6 +5,7 @@
 class TreeNode:public Object{
 	private:
 		Object* data;
+		TreeNode* father;
 		TreeNode* hijoizq;
 		TreeNode* hermder;
 	public:
@@ -17,6 +18,8 @@ class TreeNode:public Object{
 		bool setHermano(TreeNode*);
 		TreeNode* getHijo();
 		TreeNode* getHermano();
+		TreeNode* getFather();
+		void setFather(TreeNode*);
 		Object* getData();
 		bool setData(Object*);
 };

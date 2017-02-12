@@ -5,9 +5,8 @@ using std::string;
 class Person:public Object{
 	protected:
 		string name;
-		int age;
 	public:
-		Person(string,int);
+		Person(string);
 		string getName();
 		virtual ~Person();
 		virtual string toString()const;
