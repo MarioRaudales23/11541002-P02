@@ -8,9 +8,12 @@ Presidente,Manuel,5000
 			Secretaria,dede,50
 		Secretaria,dudu,50
 			Mercadito,chambrososs,1200
-					Mentiroso,jtss,1500
-			Mercadito,chambrosos,1200
+				Mentiroso,jtss,1500
 					Mentiroso,jts,1500
+					Mentiroso,jts13,1500
+						Mentiroso,jts14,1500
+			Mercadito,chambrosos,1200
+				Mentiroso,jts,1500
 	Mercadeo,Mino,1900
 		Mentiroso,Judas,1500
 			Mentiroso,jeji,1500

@@ -20,25 +20,29 @@ Tree::~Tree(){
 TreeNode* Tree::getRaiz(){
 	return raiz;
 }
-
-bool Tree::insert(Object* padre,Object* nuevo){
+//Metodo insert
+bool Tree::insert(Object* padre,Object* nuevo,int tabs){
+	//inserta cuando no hay raiz
 	if (raiz == NULL)
 	{
-		TreeNode* neo = new TreeNode(nuevo);
+		TreeNode* neo = new TreeNode(nuevo,tabs);
 		raiz = neo;
 		return true;
 	}else{
-		TreeNode* neo = new TreeNode(nuevo);
-		TreeNode* pneo = buscar(raiz,padre);
+		//Se crea el nuevo nodo
+		TreeNode* neo = new TreeNode(nuevo,tabs);
+		TreeNode* pneo = buscar(raiz,padre);//se busca el nodo que sera padre del nuevo
 		while(pneo!=NULL){
 			if (pneo!=NULL)
 			{
+				//Si el padre existe se evalua si ya tiene hijo, si no tiene se asigna como primer hijo
 				if (pneo->getHijo()==NULL)
 				{
 					pneo->setHijo(neo);
 					neo->setFather(pneo);
 					return true;
 				}else{
+					//Sino se crea un temporal hasta llegar al hijo mas a la derecha y se asigna el nuevo nodo
 					neo->setFather(pneo);
 					pneo = pneo->getHijo();
 					while(pneo->getHermano()!=NULL){
@@ -48,11 +52,12 @@ bool Tree::insert(Object* padre,Object* nuevo){
 					return true;
 				}
 			}else{
+				//Si no existe el padre se crea el nodo padre y luego si asigna el nuevo hijo
 				TreeNode* temp = raiz->getHijo();
 				while(temp->getHermano()!=NULL){
 					temp=temp->getHermano();
 				}
-				TreeNode* padrenuev = new TreeNode(padre);
+				TreeNode* padrenuev = new TreeNode(padre,1);
 				temp->setHermano(padrenuev);
 				temp->getHermano()->setHijo(neo);
 				return true;
@@ -61,6 +66,7 @@ bool Tree::insert(Object* padre,Object* nuevo){
 	}
 	return false;
 }
+//Metodo que busca desde un nodo y revisa sus hijos y hermanos para ver si se encuentra
 TreeNode* Tree::buscar(TreeNode* nodo,Object* busca){
 	if (nodo != NULL)
 	{
@@ -75,6 +81,7 @@ TreeNode* Tree::buscar(TreeNode* nodo,Object* busca){
 		}
 	}
 }
+//Metodo que se llama dentro de imprimirpro para imprimir el arbol
 void Tree::imprimir(int tab,TreeNode* impri){
 	if (impri != NULL)
 	{
@@ -88,8 +95,13 @@ void Tree::imprimir(int tab,TreeNode* impri){
 
 	}
 }
-
+//Imprime el arbol y asigna tabs
 void Tree::imprimirpro(){
 	imprimir(0,raiz);
 	cout<<endl;
+}
+//Metodo clear limpia el arbol
+void Tree::clear(){
+	delete raiz;
+	raiz = NULL;
 }
