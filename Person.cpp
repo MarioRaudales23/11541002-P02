@@ -13,7 +13,7 @@ Person::~Person(){
 
 string Person::toString()const{
 	stringstream ss;
-	ss<<"Nombre: "<<name;
+	ss<<name;
 	return ss.str();
 }
 

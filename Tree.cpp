@@ -89,7 +89,7 @@ void Tree::imprimir(int tab,TreeNode* impri){
 		{
 			cout<<"\t";
 		}
-		cout<<impri->getData()->toString()<<endl;
+		cout<<"|->"<<impri->getData()->toString()<<endl;
 		imprimir(tab+1,impri->getHijo());
 		imprimir(tab,impri->getHermano());
 

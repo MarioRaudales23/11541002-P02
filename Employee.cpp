@@ -14,7 +14,7 @@ Employee::~Employee(){
 
 string Employee::toString()const{
 	stringstream ss;
-	ss<<Person::toString()<<" Sueldo:"<<sueldo<<" cargo: "<<cargo;
+	ss<<cargo<<", "<<Person::toString()<<", "<<sueldo;
 	return ss.str();
 }
 //Devuelve el sueldo actual
